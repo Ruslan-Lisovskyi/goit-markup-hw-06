@@ -460,11 +460,19 @@
           </ul>
         </div>
         <div class="footer-form-container">
-          <h3 class="after-second-titles footer-white-title">
+          <!-- <h3 class="after-second-titles footer-white-title">
             подпишитесь на рассылку
-          </h3>
+          </h3> -->
           <form action="#" class="footer-form">
-            <input type="email" class="footer-input-email" />
+            <label class="footer-label">
+              подпишитесь на рассылку
+              <input
+                type="email"
+                class="footer-input-email"
+                placeholder="E-mail"
+                name="user-email"
+              />
+            </label>
             <button type="submit" class="primery-btn footer-btn">
               Подписаться
             </button>
@@ -482,14 +490,48 @@
         </button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
         <form action="#">
-          <p class="input-title">Имя</p>
-          <input type="text" class="form-input" required />
-          <p class="input-title">Телефон</p>
-          <input type="tel" class="form-input" required />
-          <p class="input-title">Почта</p>
-          <input type="email" class="form-input" required />
-          <p class="input-title">Комментарий</p>
-          <input type="text" class="commet" required />
+          <div class="form-field">
+            <label class="modal-label" for="user-name"> Имя</label>
+            <input
+              type="text"
+              class="form-input"
+              required
+              name="user-name"
+              minlength="2"
+              id="user-name"
+            />
+          </div>
+          <div class="form-field">
+            <label class="modal-label" for="user-tel">Телефон</label>
+            <input
+              type="tel"
+              class="form-input"
+              required
+              name="user-tel"
+              id="user-tel"
+              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              title="+380 (95) 111-11-11"
+            />
+          </div>
+          <div class="form-field">
+            <label class="modal-label" for="user-email">Почта</label>
+            <input
+              type="email"
+              class="form-input"
+              required
+              name="user-email"
+              id="user-email"
+            />
+          </div>
+          <div class="form-field">
+            <label class="modal-label" for="user-commet">Комментарий</label>
+            <textarea
+              class="modal-textarea"
+              name="user-commet"
+              id="user-commet"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
           <button type="submit" class="primery-btn">Отправить</button>
         </form>
       </div>
