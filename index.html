@@ -484,7 +484,7 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
-          <svg width="11px" height="11px">
+          <svg width="18px" height="18px">
             <use href="./images/icons.svg#icon-modal-close-btn"></use>
           </svg>
         </button>
@@ -509,7 +509,6 @@
               required
               name="user-tel"
               id="user-tel"
-              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
               title="+380 (95) 111-11-11"
             />
           </div>
@@ -531,6 +530,12 @@
               id="user-commet"
               placeholder="Введите текст"
             ></textarea>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" value="checkbox" name="checkbox" />
+            <p class="checkbox-text">
+              Соглашаюсь с рассылкой и принимаю Условия договора
+            </p>
           </div>
           <button type="submit" class="primery-btn">Отправить</button>
         </form>

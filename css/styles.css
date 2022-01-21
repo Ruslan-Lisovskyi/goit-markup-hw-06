@@ -96,6 +96,7 @@ img {
 .page-header {
   background-color: var(--primery-bgr-color);
   position: relative;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header-container {
@@ -213,18 +214,7 @@ img {
   position: absolute;
   background-color: var(--btn-color);
   left: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.page-header::after {
-  content: '';
-  position: absolute;
-  height: 1px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--border-color);
+  bottom: -1px;
 }
 /* ----------------MAIN----------------- */
 /* HERO */
@@ -238,7 +228,7 @@ img {
     url(../images/hero-bgr.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  flex-grow: 1;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -286,7 +276,8 @@ img {
   border-radius: 4px;
   display: flex;
   justify-content: center;
-  padding: 25px 100px;
+  align-items: center;
+  height: 120px;
   margin-bottom: 30px;
 }
 
@@ -332,11 +323,12 @@ img {
   color: var(--primery-bgr-color);
   background: rgba(47, 48, 58, 0.8);
   width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  margin-bottom: 0;
-  text-align: center;
+  height: 70px;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
   bottom: 0;
 }
 
@@ -518,6 +510,7 @@ img {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+  color: var(--primery-text-color);
 }
 
 .portfolio-item-wrap {
@@ -567,14 +560,19 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item:hover .portfolio-img-text,
-.portfolio-item:focus .portfolio-img-text {
+.portfolio-link:hover .portfolio-img-text,
+.portfolio-link:focus .portfolio-img-text {
   transform: translateY(0);
 }
 
@@ -617,11 +615,12 @@ img {
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .footer-white-title {
   color: var(--primery-bgr-color);
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .page-footer {
@@ -664,6 +663,10 @@ img {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-items:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .page-footer-address:hover,
@@ -802,4 +805,11 @@ img {
   border-radius: 4px;
   margin-bottom: 20px;
   resize: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
