@@ -694,9 +694,17 @@ img {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
   background-color: inherit;
   margin-top: 20px;
   color: var(--primery-bgr-color);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-input-email:focus {
+  border-color: var(--btn-color);
 }
 
 .footer-form {
@@ -706,6 +714,8 @@ img {
 .footer-btn {
   margin-left: 15px;
   margin-top: 36px;
+  position: relative;
+  display: flex;
 }
 
 .footer-label {
@@ -903,4 +913,11 @@ img {
 .policy-check:checked + .check-text .check-svg {
   border: none;
   fill: var(--primery-bgr-color);
+}
+
+.twiter-svg {
+  margin-left: 10px;
+  position: absolute;
+  right: 25px;
+  top: 13px;
 }
