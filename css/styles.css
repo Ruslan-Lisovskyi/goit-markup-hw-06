@@ -709,13 +709,18 @@ img {
 
 .footer-form {
   display: flex;
+  align-items: flex-end;
+}
+
+.twiter-svg {
+  margin-left: 10px;
 }
 
 .footer-btn {
-  margin-left: 15px;
-  margin-top: 36px;
   position: relative;
   display: flex;
+  align-items: center;
+  margin-left: 12px;
 }
 
 .footer-label {
@@ -813,6 +818,7 @@ img {
 }
 
 .modal-label {
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -821,6 +827,7 @@ img {
 }
 
 .modal-textarea {
+  display: block;
   outline: none;
   width: 100%;
   min-height: 120px;
@@ -828,7 +835,6 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 20px;
   resize: none;
   transition-property: border-color;
   transition-duration: 250ms;
@@ -854,7 +860,6 @@ img {
 
 .svg-position {
   position: relative;
-  margin-bottom: 10px;
 }
 
 .form-svg {
@@ -874,6 +879,7 @@ img {
   color: var(--primery-text-color);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .label-link {
@@ -915,9 +921,10 @@ img {
   fill: var(--primery-bgr-color);
 }
 
-.twiter-svg {
-  margin-left: 10px;
-  position: absolute;
-  right: 25px;
-  top: 13px;
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-field-textarea {
+  margin-bottom: 20px;
 }
